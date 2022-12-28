@@ -3,8 +3,7 @@ Global $state = "stop"
 Opt("PixelCoordMode", 2) ;Отсчет координат пикселей от левого верхнего угла клиентской части окна
 Opt("MouseCoordMode", 2) ;Отсчет координат мыши от левого верхнего угла клиентской части окна
 HotKeySet("3", "_Exit")
-HotKeySet("1","Runing")
-HotKeySet("2","Pause")
+
 WinActivate($WinName)
 WinWaitActive($WinName)	
 
@@ -15,7 +14,7 @@ EndFunc
 
 
 
-Func Fish()
+
 	While 1
 			$coord = PixelSearch(641,335,1281,618, 0xFFFFFF)
 			If Not @error Then
@@ -25,5 +24,5 @@ Func Fish()
 				Send("5")
 			EndIf
 	WEnd
-EndFunc
+
 
